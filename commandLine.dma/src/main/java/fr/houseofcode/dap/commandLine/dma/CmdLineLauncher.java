@@ -15,6 +15,7 @@ import org.apache.logging.log4j.Logger;
  */
 public class CmdLineLauncher {
 
+    //TODO DMA by Djer |JavaDoc| Mauvais commentaire javadoc.
     /**
     * @param args
     */
@@ -25,7 +26,6 @@ public class CmdLineLauncher {
     * @throws IOException if the sent or received message is broken.
     * @throws GeneralSecurityException if there's a security failure.
     */
-
     public static void main(final String[] args) throws IOException, GeneralSecurityException {
         ServerUtils su = new ServerUtils();
         LOG.debug("Debut du Main avec comme arguments :  " + args);
@@ -38,21 +38,25 @@ public class CmdLineLauncher {
         int n = Integer.parseInt(args[0]);
         switch (n) {
         case 1:
+            //TODO DMA by Djer |IDE| Encodage : attention tes fichiers étaient encodés en ISO-8859-2 lorsque tu as ajouter ce messages !
             LOG.debug("Connexion de l'utlisateur Ã  son calendrier : ");
             System.out.println("Tiens toi pret pour ton prochain events  ^^\n" + allEvents);
             break;
 
         case 2:
+            //TODO DMA by Djer |IDE| Encodage : attention tes fichiers étaient encodés en ISO-8859-2 lorsque tu as ajouter ce messages !
             LOG.debug("Connexion de l'utilisateur Ã  son comtpe email : ");
             System.out.println("Vous avez : " + nbemails + " email(s) non lu(s) \n");
             break;
 
         case 3:
+            //TODO DMA by Djer |IDE| Encodage : attention tes fichiers étaient encodés en ISO-8859-2 lorsque tu as ajouter ce messages !
             LOG.debug("Connexion de l'utilisateur Ã  sa classe de label :");
             System.out.println(displayLabel);
             break;
 
         case 4:
+            //TODO DMA by Djer |IDE| Encodage : attention tes fichiers étaient encodés en ISO-8859-2 lorsque tu as ajouter ce messages !
             LOG.debug("Affichage de toutes les donnÃ©es de l'utilisateur");
             System.out.println("Tiens toi pret pour ton prochain events  ^^\n" + allEvents);
             System.out.println("Vous avez : " + nbemails + " email(s) non lu(s) \n");
@@ -60,6 +64,7 @@ public class CmdLineLauncher {
             break;
 
         default:
+            //TODO DMA by Djer |IDE| Encodage : attention tes fichiers étaient encodés en ISO-8859-2 lorsque tu as ajouter ce messages !
             System.out.println("Vous n'avez rien Ã  afficher !");
         }
     }

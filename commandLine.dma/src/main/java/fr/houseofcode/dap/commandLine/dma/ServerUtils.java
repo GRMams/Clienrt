@@ -16,6 +16,7 @@ import java.net.URL;
 public class ServerUtils {
     private final static String USER_AGENT = "Mozilla/5.0";
 
+    //TODO DMA by Djer |JavaDoc| Mauvais commentaire javadoc.
     /**
      * @param args
      */
@@ -25,18 +26,22 @@ public class ServerUtils {
         return Event;
     }
 
+    //TODO DMA by Djer |JavaDoc| Il manque la javaDoc.
     public String getLabels(String UserKey) throws IOException {
         // TODO Auto-generated method stub
         String Labels = CallServer("/email/Labels", UserKey);
         return Labels;
     }
 
+    //TODO DMA by Djer |JavaDoc| Il manque la javaDoc.
     public String getUnreadedMail(String UserKey) throws IOException {
         // TODO Auto-generated method stub
         String UnreadedMail = CallServer("/email/nbUnread", UserKey);
         return UnreadedMail;
     }
 
+    //TODO DMA by Djer |JavaDoc| Il manque la javaDoc.
+    //TODO DMA by Djer |POO| Le nom des méthodes doivent commencer par une minuscule puis être en CamelCase.
     public String CallServer(String url, String UserKey) throws IOException {
         // HTTP GET request 
 
@@ -50,6 +55,7 @@ public class ServerUtils {
         con.setRequestProperty("User-Agent", USER_AGENT);
 
         int responseCode = con.getResponseCode();
+        //TODO DMA by Djer |Log4J| Une log (en Debug) serait plsu approprié.
         System.out.println("\nSending 'GET' request to URL : " + "http://localhost:8080" + url);
         System.out.println("Response Code : " + responseCode);
 
@@ -63,6 +69,7 @@ public class ServerUtils {
         in.close();
 
         //print result
+        //TODO DMA by Djer |Log4J| Une log (en Debug) serait plsu approprié.
         System.out.println(response.toString());
 
         return response.toString();
