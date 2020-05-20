@@ -9,6 +9,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+//TODO DMA by Djer |JavaDoc| Il manque la description (de la classe)
 /**
  * @author dimam
  *
@@ -21,6 +22,7 @@ public class ServerUtils {
      * @param args
      */
     public String NextEvent(String UserKey) throws IOException {
+        //TODO DMA by Djer |IDE| Supprime les TO-DO (même généré par ton IDE) une fois traités
         // TODO Auto-generated method stub
         String Event = CallServer("/Calendar/Events", UserKey);
         return Event;
@@ -28,6 +30,7 @@ public class ServerUtils {
 
     //TODO DMA by Djer |JavaDoc| Il manque la javaDoc.
     public String getLabels(String UserKey) throws IOException {
+      //TODO DMA by Djer |IDE| Supprime les TO-DO (même généré par ton IDE) une fois traités
         // TODO Auto-generated method stub
         String Labels = CallServer("/email/Labels", UserKey);
         return Labels;
@@ -35,6 +38,7 @@ public class ServerUtils {
 
     //TODO DMA by Djer |JavaDoc| Il manque la javaDoc.
     public String getUnreadedMail(String UserKey) throws IOException {
+      //TODO DMA by Djer |IDE| Supprime les TO-DO (même généré par ton IDE) une fois traités
         // TODO Auto-generated method stub
         String UnreadedMail = CallServer("/email/nbUnread", UserKey);
         return UnreadedMail;
@@ -55,7 +59,7 @@ public class ServerUtils {
         con.setRequestProperty("User-Agent", USER_AGENT);
 
         int responseCode = con.getResponseCode();
-        //TODO DMA by Djer |Log4J| Une log (en Debug) serait plsu approprié.
+        //TODO DMA by Djer |Log4J| Une log (en Debug) serait plus approprié.
         System.out.println("\nSending 'GET' request to URL : " + "http://localhost:8080" + url);
         System.out.println("Response Code : " + responseCode);
 
@@ -69,7 +73,7 @@ public class ServerUtils {
         in.close();
 
         //print result
-        //TODO DMA by Djer |Log4J| Une log (en Debug) serait plsu approprié.
+        //TODO DMA by Djer |Log4J| Une log (en Debug) serait plus approprié.
         System.out.println(response.toString());
 
         return response.toString();

@@ -9,6 +9,8 @@ import java.security.GeneralSecurityException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+//TODO DMA by Djer |JavaDoc| Il manque la description de la classe
+//TODO DMA by Djer |POO| Attention ton projet ne respect pas la structure "standard", le sous-dossier "commandLine.dma" ne devrait pas etre présent
 /**
  * @author dimam
  *
